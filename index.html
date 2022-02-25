@@ -10,12 +10,22 @@
       margin: auto;
       width: 80%;
     }
-    .img-position-center {
+    a,
+    a:visited
+    { 
+      text-decoration: none;
+      color: black;
+    }
+    h2 {
+      text-align: center;
+    }
+    .img-position-center,
+    .textbox
+    {
       display: flex;
       justify-content: center;
     }
     .textbox {
-      padding-left: 305px;
       margin: 15px 0;
     }
     img {
@@ -34,715 +44,903 @@
   </style>
 </head>
 <body>
+  <h2 id="vue-big-picture"> 
+    <a href="#vue-big-picture">#</a>
+    Vue 개관 
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 001 개관1.PNG">
   </div>
   <div class="textbox">
-    <span>
-      Vue의 큰그림 
-    </span> <br>
-    <span>
-      Html + Css + Js를 함께 사용가능
-    </span> <br>
-    <span>
-      -> 컴포넌트
-    </span> <br> <br>
-    <span>
-      하나의 컴포넌트 안에서의 관계
-    </span> <br>
-    <span>
-      컴포넌트와 컴포넌트의 관계
-    </span> <br><br>
-    <span>
-      관계에서 주고 받는것들은??!! <br>
-      변수, 함수, 컴포넌트 -> 조화롭게 사용!!
-    </span> <br>
+    <div>
+      <span>
+        Vue의 큰그림 
+      </span> <br>
+      <span>
+        Html + Css + Js를 함께 사용가능
+      </span> <br>
+      <span>
+        -> 컴포넌트
+      </span> <br> <br>
+      <span>
+        하나의 컴포넌트 안에서의 관계
+      </span> <br>
+      <span>
+        컴포넌트와 컴포넌트의 관계
+      </span> <br><br>
+      <span>
+        관계에서 주고 받는것들은??!! <br>
+        변수, 함수, 컴포넌트 -> 조화롭게 사용!!
+      </span> <br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 002 개관2.PNG">
   </div>
   <div class="textbox">
-    <span>
-      전역사용 -> 아무데서나 사용가능 <br>
-      로컬사용 -> 그 곳만 사용가능
-    </span> <br>
-    <span>
-      기타 알짜배기 기술들
-    </span> <br>
+    <div>
+      <span>
+        전역사용 -> 아무데서나 사용가능 <br>
+        로컬사용 -> 그 곳만 사용가능
+      </span> <br>
+      <span>
+        기타 알짜배기 기술들
+      </span> <br>
+    </div>
   </div>
+  <h2 id="vue-file-relation"> 
+    <a href="#vue-file-relation">#</a>
+    파일관계
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 003 파일관계.PNG">
   </div>
   <div class="textbox">
-    <span>
-      그림에서 확장자가 없는것은 폴더이다
-    </span> <br><br>
-    <span>
-      우리가 화면으로 보는 페이지는 index.html파일이다 <br>
-      main.js에서 vue객체를 생성하고 App.vue를 import하여<br>
-      index.html에 mount하여 연결한다
-    </span> <br><br>
-    <span>
-      App.vue는 주소에 따라 화면에 보여줄 router태그와<br>
-      핵심 컴포넌트들이 있다
-    </span> <br><br>
-    <span>
-      pages라는 폴더에서 router로 보여줄 큰 단위의 페이지를 관리<br>
-      component폴더에서 각종 컴포넌트를 관리한다
-    </span> <br><br>
-    <span>
-      즉 우리가 보는 화면은 여러단위의 컴포넌트들로 이루어져 있는것이다<br>
-      어떤 컴포넌트를 별도로 보여주고 싶으면 teleport를하여<br>
-      따로 보여주는것도 가능하다
-    </span> <br><br>
+    <div>
+      <span>
+        그림에서 확장자가 없는것은 폴더이다
+      </span> <br><br>
+      <span>
+        우리가 화면으로 보는 페이지는 index.html파일이다 <br>
+        main.js에서 vue객체를 생성하고 App.vue를 import하여<br>
+        index.html에 mount하여 연결한다
+      </span> <br><br>
+      <span>
+        App.vue는 주소에 따라 화면에 보여줄 router태그와<br>
+        핵심 컴포넌트들이 있다
+      </span> <br><br>
+      <span>
+        pages라는 폴더에서 router로 보여줄 큰 단위의 페이지를 관리<br>
+        component폴더에서 각종 컴포넌트를 관리한다
+      </span> <br><br>
+      <span>
+        즉 우리가 보는 화면은 여러단위의 컴포넌트들로 이루어져 있는것이다<br>
+        어떤 컴포넌트를 별도로 보여주고 싶으면 teleport를하여<br>
+        따로 보여주는것도 가능하다
+      </span> <br><br>
+    </div>
   </div>
+  <h2 id="vue-component"> 
+    <a href="#vue-component">#</a>
+    컴포넌트
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 004 컴포넌트1.PNG">
   </div>
   <div class="textbox">
-    <span>
-      먼저, 하나의 컴포넌트 내부의 관계성
-    </span> <br><br>
-    <span>
-      어떤 상호작용을 하는지 중요하다
-    </span> <br><br>
-    <span>
-      변수와 함수 -> 표현식 <br>
-      하위(자식) 컴포넌트
-    </span> <br><br>
-    <span>
-      => 이들을 주고 받으면서 기능을 구현함
-    </span> <br><br>
+    <div>
+      <span>
+        먼저, 하나의 컴포넌트 내부의 관계성
+      </span> <br><br>
+      <span>
+        어떤 상호작용을 하는지 중요하다
+      </span> <br><br>
+      <span>
+        변수와 함수 -> 표현식 <br>
+        하위(자식) 컴포넌트
+      </span> <br><br>
+      <span>
+        => 이들을 주고 받으면서 기능을 구현함
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 005 컴포넌트2.PNG">
   </div>
   <div class="textbox">
-    <span>
-      컴포넌트와 컴포넌트와의 관계성
-    </span> <br><br>
-    <span>
-      1. 부모와 자식이라면 데이터와 이벤트를 주고 받는다
-    </span> <br><br>
-    <span>
-      2. 형제라면 부모가 형제를 모아서 중앙관리 
-    </span> <br><br>
+    <div>
+      <span>
+        컴포넌트와 컴포넌트와의 관계성
+      </span> <br><br>
+      <span>
+        1. 부모와 자식이라면 데이터와 이벤트를 주고 받는다
+      </span> <br><br>
+      <span>
+        2. 형제라면 부모가 형제를 모아서 중앙관리 
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 006 컴포넌트3.PNG">
   </div>
   <div class="textbox">
-    <span>
-      컴포넌트는 유연하고 재사용 가능한 틀이다!!
-    </span> <br><br>
-    <span>
-      재활용성 -> 컴포넌트를 창틀로 비유하자면 <br>
-      1번 ~ 4번 창틀을 보여주었는데<br>
-      창틀이 4개가 다 다른창틀이 아니다<br>
-      창틀은 하나인데 데이터만 다르게 바꿔준것이다<br>
-      이것이 컴포넌트의 재활용성 이다
+    <div>
+      <span>
+        컴포넌트는 유연하고 재사용 가능한 틀이다!!
+      </span> <br><br>
+      <span>
+        재활용성 -> 컴포넌트를 창틀로 비유하자면 <br>
+        1번 ~ 4번 창틀을 보여주었는데<br>
+        창틀이 4개가 다 다른창틀이 아니다<br>
+        창틀은 하나인데 데이터만 다르게 바꿔준것이다<br>
+        이것이 컴포넌트의 재활용성 이다
+      </span>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 007 컴포넌트4.PNG">
   </div>
   <div class="textbox">
-    <span>
-      유연성 -> 조건에 따라 다른 모습으로 보여줄 수 있다<br>
-      조건이라하면 v-if, if문, 삼항연산자,등을 적극 활용하자
+    <div>
+      <span>
+        유연성 -> 조건에 따라 다른 모습으로 보여줄 수 있다<br>
+        조건이라하면 v-if, if문, 삼항연산자,등을 적극 활용하자
+      </span>
+    </div>
   </div>
+  <h2 id="vue-global-local"> 
+    <a href="#vue-global-local">#</a>
+    전역, 로컬
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 008 전역로컬1.PNG">
   </div>
   <div class="textbox">
-    <span>
-      기능??? axios, router라든지 외부적인 기술들을 사용하고싶어!!<br>
-      기술의 소유자로부터 import하여 사용한다
-    </span> <br><br>
-    <span>
-      소유자는 기술을 export 하여 내보내고 <br>
-      사용자는 기술을 import 하여 받아와서 사용한다
-    </span> <br><br>
-    <span>
-      기술에도 개수에 따라 exoprt와 import의 방식의 차이가 있다<br>
-    </span> <br><br>
-    <span>
-      1개 일때는 default로 내보내고 기능이름 하나로 사용하면 된다 <br>
-      여러개 일때는 사용시에 구조분해 할당하여 필요한것만 꺼내서 사용한다<br>
-    </span> <br><br>
+    <div>
+      <span>
+        기능??? axios, router라든지 외부적인 기술들을 사용하고싶어!!<br>
+        기술의 소유자로부터 import하여 사용한다
+      </span> <br><br>
+      <span>
+        소유자는 기술을 export 하여 내보내고 <br>
+        사용자는 기술을 import 하여 받아와서 사용한다
+      </span> <br><br>
+      <span>
+        기술에도 개수에 따라 exoprt와 import의 방식의 차이가 있다<br>
+      </span> <br><br>
+      <span>
+        1개 일때는 default로 내보내고 기능이름 하나로 사용하면 된다 <br>
+        여러개 일때는 사용시에 구조분해 할당하여 필요한것만 꺼내서 사용한다<br>
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 009 전역로컬2.PNG">
   </div>
   <div class="textbox">
-    <span>
-      기술을 사용하는 장소가 크게 전역과 로컬로 나뉜다
-    </span> <br><br>
-    <span>
-      전역은 main.js에 등록하면 아무데서나 사용가능하다 <br>
-      단, 속도의 저하가 생기게 된다
-    </span> <br><br>
-    <span>
-      로컬은 import해서 그 곳에서만 사용한다
-    </span> <br><br>
+    <div>
+      <span>
+        기술을 사용하는 장소가 크게 전역과 로컬로 나뉜다
+      </span> <br><br>
+      <span>
+        전역은 main.js에 등록하면 아무데서나 사용가능하다 <br>
+        단, 속도의 저하가 생기게 된다
+      </span> <br><br>
+      <span>
+        로컬은 import해서 그 곳에서만 사용한다
+      </span> <br><br>
+    </div>
   </div>
+  <h2 id="vue-lifecycle"> 
+    <a href="#vue-lifecycle">#</a>
+    라이프 사이클
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 010 라이프사이클.PNG">
   </div>
   <div class="textbox">
-    <span>
-      라이프사이클은 컴포넌트나 나타나고 사라지는 과정이다
-    </span> <br><br>
-    <span>
-      만들고 -> 올리고 -> 올려진 상태 -> 내린다
-    </span> <br><br>
-    <span>
-      각 단계의 이전, 이후가 핵심기능이다.
-    </span> <br><br>
+    <div>
+      <span>
+        라이프사이클은 컴포넌트나 나타나고 사라지는 과정이다
+      </span> <br><br>
+      <span>
+        만들고 -> 올리고 -> 올려진 상태 -> 내린다
+      </span> <br><br>
+      <span>
+        각 단계의 이전, 이후가 핵심기능이다.
+      </span> <br><br>
+    </div>
   </div>
+  <h2 id="vue-script"> 
+    <a href="#vue-script">#</a>
+    script 영역
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 011 스크립트영역.PNG">
   </div>
   <div class="textbox">
-    <span>
-      script는 2개의 영역이 있다
-    </span> <br><br>
-    <span>
-      1. import하거나 JS코드를 작성하는 공간<br>
-      함수정의, 변수정의 등
-    </span> <br><br>
-    <span>
-      2. export default 공간 <br>
-      setup,data,등의 vue API를 작성한다<br>
-      물론, 이들 내부에서도 JS코드를 작성할 수 있다
-    </span> <br><br>
-    <span>
-      당연한거지만 1과 2는 서로 연동이 가능하다
-    </span> <br><br>
+    <div>
+      <span>
+        script는 2개의 영역이 있다
+      </span> <br><br>
+      <span>
+        1. import하거나 JS코드를 작성하는 공간<br>
+        함수정의, 변수정의 등
+      </span> <br><br>
+      <span>
+        2. export default 공간 <br>
+        setup,data,등의 vue API를 작성한다<br>
+        물론, 이들 내부에서도 JS코드를 작성할 수 있다
+      </span> <br><br>
+      <span>
+        당연한거지만 1과 2는 서로 연동이 가능하다
+      </span> <br><br>
+    </div>
   </div>
+  <h2 id="vue-template"> 
+    <a href="#vue-template">#</a>
+    template 영역
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 012 바인딩1.PNG">
   </div>
   <div class="textbox">
-    <span>
-      바인딩은 script와 template를 연결하는 것이다
-    </span> <br><br>
-    <span>
-      속성에는 변수를 연결하여 사용하고 <br>
-      이벤트에는 함수를 연결하여 사용한다
-    </span> <br><br>
-    <span>
-      근데, template에서도 변수를 바꾸고 싶다면<br>
-      당연히 상호작용 할수있는 input태그를 이용하여<br>
-      value대신 v-model로 양방향 바인딩을 이용하면된다
-    </span> <br><br>
+    <div>
+      <span>
+        바인딩은 script와 template를 연결하는 것이다
+      </span> <br><br>
+      <span>
+        속성에는 변수를 연결하여 사용하고 <br>
+        이벤트에는 함수를 연결하여 사용한다
+      </span> <br><br>
+      <span>
+        근데, template에서도 변수를 바꾸고 싶다면<br>
+        당연히 상호작용 할수있는 input태그를 이용하여<br>
+        value대신 v-model로 양방향 바인딩을 이용하면된다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 013 객체로바인딩.PNG">
   </div>
   <div class="textbox">
-    <span>
-      class, style 바인딩 -> 직접넣어주거나, boolean값에 따라 다른값 <br>
-      값을 넣어주는방법 => 객체, 배열, 삼항 연산자, 등
-    </span> <br><br>
-    <span>
-      1. 객체로 바인딩 <br>
-      class -> 클래스명 : boolean값 <br>
-      style -> 속성명 : 속성값
-    </span> <br><br>
+    <div>
+      <span>
+        class, style 바인딩 -> 직접넣어주거나, boolean값에 따라 다른값 <br>
+        값을 넣어주는방법 => 객체, 배열, 삼항 연산자, 등
+      </span> <br><br>
+      <span>
+        1. 객체로 바인딩 <br>
+        class -> 클래스명 : boolean값 <br>
+        style -> 속성명 : 속성값
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 014 배열로 바인딩.PNG">
   </div>
   <div class="textbox">
-    <span>
-      2. 배열로 바인딩 -> 여러 class를 묶어서 줄수있다
-    </span> <br><br>
+    <div>
+      <span>
+        2. 배열로 바인딩 -> 여러 class를 묶어서 줄수있다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 015 연산자바인딩.PNG">
   </div>
   <div class="textbox">
-    <span>
-      3. 삼항연산자 바인딩 -> 조건의 참,거짓으로 다른 스타일을 줄 수 있다
-    </span> <br><br>
+    <div>
+      <span>
+        3. 삼항연산자 바인딩 -> 조건의 참,거짓으로 다른 스타일을 줄 수 있다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 016 v-for.PNG">
   </div>
   <div class="textbox">
-    <span>
-      v-for는 요소의 개수만큼 태그를 생성한다<br>
-      구분의 용도로 :key값을 설정 해야한다
-    </span> <br><br>
+    <div>
+      <span>
+        v-for는 요소의 개수만큼 태그를 생성한다<br>
+        구분의 용도로 :key값을 설정 해야한다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 017 v-if.PNG">
   </div>
   <div class="textbox">
-    <span>
-      v-if는 조건에 따라 태그를 생성하거나 제거한다<br>
-      v-show는 처음부터 존재하고 display:none속성으로 보이거나 안보이게 한다
-    </span> <br><br>
-    <span>
-      boolean값으로 제어를 하는데 <br>
-      값이 존재하면 true라는 성질을 주로 사용한다 <br>
-      단!! 0 , NaN과 같이 값으로 존재해도 false인 경우도 있으니 주의하자! 
-    </span> <br><br>
+    <div>
+      <span>
+        v-if는 조건에 따라 태그를 생성하거나 제거한다<br>
+        v-show는 처음부터 존재하고 display:none속성으로 보이거나 안보이게 한다
+      </span> <br><br>
+      <span>
+        boolean값으로 제어를 하는데 <br>
+        값이 존재하면 true라는 성질을 주로 사용한다 <br>
+        단!! 0 , NaN과 같이 값으로 존재해도 false인 경우도 있으니 주의하자! 
+      </span> <br><br>
+    </div>
   </div>
+  <h2 id="vue-optional-api"> 
+    <a href="#vue-optional-api">#</a>
+    optional API
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 018 변수.PNG">
   </div>
   <div class="textbox">
-    <span>
-      optional API는 vue2에서 주로 사용하는 기술이다
-    </span> <br><br>
-    <span>
-      data() {} 는 변수를 정의하는 곳이다
-    </span> <br><br>
-    <span>
-      변수는 객체의 키 : 값 처럼 사용한다<br>
-      다른 블럭에서 사용할려면 this.변수명으로 사용한다
-    </span> <br><br>
+    <div>
+      <span>
+        optional API는 vue2에서 주로 사용하는 기술이다
+      </span> <br><br>
+      <span>
+        data() {} 는 변수를 정의하는 곳이다
+      </span> <br><br>
+      <span>
+        변수는 객체의 키 : 값 처럼 사용한다<br>
+        다른 블럭에서 사용할려면 this.변수명으로 사용한다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 019 함수.PNG">
   </div>
   <div class="textbox">
-    <span>
-      methods: { } 는 함수를 정의하는 곳이다
-    </span> <br><br>
+    <div>
+      <span>
+        methods: { } 는 함수를 정의하는 곳이다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 020 컴포넌트.PNG">
   </div>
   <div class="textbox">
-    <span>
-      components: { } 는 컴포넌트를 가져오는 곳이다
-    </span> <br><br>
-    <span>
-      컴포넌트는 template에서 사용한다
-    </span> <br><br>
+    <div>
+      <span>
+        components: { } 는 컴포넌트를 가져오는 곳이다
+      </span> <br><br>
+      <span>
+        컴포넌트는 template에서 사용한다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 021 computed.PNG">
   </div>
   <div class="textbox">
-    <span>
-      computed: { } 는 계산식의 reative state를 감시하다가 <br>
-      그 값의 변화가 생기면 바로 계산식을 실행한다
-    </span> <br><br>
-    <span>
-      결과값은 변수명에 저장하고 <br>
-      외부에서 변수를 사용할때는 this.변수명의 형태로 사용한다
-    </span> <br><br>
+    <div>
+      <span>
+        computed: { } 는 계산식의 reative state를 감시하다가 <br>
+        그 값의 변화가 생기면 바로 계산식을 실행한다
+      </span> <br><br>
+      <span>
+        결과값은 변수명에 저장하고 <br>
+        외부에서 변수를 사용할때는 this.변수명의 형태로 사용한다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 022 watch.PNG">
   </div>
   <div class="textbox">
-    <span>
-      watch: { } 는 감시할 변수를 감시하다가 <br>
-      그 값의 변화가 생기면 바로 계산식을 실행한다
-    </span> <br><br>
+    <div>
+      <span>
+        watch: { } 는 감시할 변수를 감시하다가 <br>
+        그 값의 변화가 생기면 바로 계산식을 실행한다
+      </span> <br><br>
+    </div>
   </div>
+  <h2 id="vue-composition-api"> 
+    <a href="#vue-composition-api">#</a>
+    composition API
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 023 setup1.PNG">
   </div>
   <div class="textbox">
-    <span>
-      composition API는 Vue3에서 전형적으로 사용하는 기술이다
-    </span> <br><br>
-    <span>
-      우선 필요한 기술들을 구조분해할당 으로  import하여 사용한다
-    </span> <br><br>
-    <span>
-      변수는 const로 선언하고 값은 ref 혹은 reactive로 감싼다 <br>
-      반응형으로 감싸면 그 자체가 주소를 나타내기 때문에 <br>
-      변수는 주소를 바라보게 된다
-    </span> <br><br>
-    <span>
-      함수는 arrow function 으로 형성한다
-    </span> <br><br>
+    <div>
+      <span>
+        composition API는 Vue3에서 전형적으로 사용하는 기술이다
+      </span> <br><br>
+      <span>
+        우선 필요한 기술들을 구조분해할당 으로  import하여 사용한다
+      </span> <br><br>
+      <span>
+        변수는 const로 선언하고 값은 ref 혹은 reactive로 감싼다 <br>
+        반응형으로 감싸면 그 자체가 주소를 나타내기 때문에 <br>
+        변수는 주소를 바라보게 된다
+      </span> <br><br>
+      <span>
+        함수는 arrow function 으로 형성한다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 024 setup2.PNG">
   </div>
   <div class="textbox">
-    <span>
-      reactive state를 감시!!
-    </span> <br><br>
-    <span>
-      computed는 안에 callback에서 계산식을 감시한다
-    </span> <br><br>
-    <span>
-      watch는 변수를 감시하다가 변경시에 callback을 실행함 <br>
-      callback안의 인수인 new, old는 변수의 변화 이후랑 이전의 값이다
-    </span> <br><br>
+    <div>
+      <span>
+        reactive state를 감시!!
+      </span> <br><br>
+      <span>
+        computed는 안에 callback에서 계산식을 감시한다
+      </span> <br><br>
+      <span>
+        watch는 변수를 감시하다가 변경시에 callback을 실행함 <br>
+        callback안의 인수인 new, old는 변수의 변화 이후랑 이전의 값이다
+      </span> <br><br>
+    </div>
   </div>
+  <h2 id="vue-reactive"> 
+    <a href="#vue-reactive">#</a>
+    반응성
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 025 reactive.PNG">
   </div>
   <div class="textbox">
-    <span>
-      reactive state -> 변화!!
-    </span> <br><br>
-    <span>
-      단, 구조분해할당 하면 반응성을 잃어버린다<br>
-      따라서 toRef로 반응성을 생성해줘야 한다
-    </span> <br><br>
+    <div>
+      <span>
+        reactive state -> 변화!!
+      </span> <br><br>
+      <span>
+        단, 구조분해할당 하면 반응성을 잃어버린다<br>
+        따라서 toRef로 반응성을 생성해줘야 한다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 026 computed.PNG">
   </div>
   <div class="textbox">
-    <span>
-      computed는 반응성변수의 변화를 감시하고 <br>
-      계산된 결과값을 기억하는 cashing기능을 가진다
-    </span> <br><br>
-    <span>
-      getter전용으로 값을 가져오는데 <br>
-      get() {  } 의 반환값이 계산식의 결과값이다 <br>
-      계산된값은 변경하지 마세요!!<br>
-      임시 스냅샷 정도로 생각하는것이 무난함
-    </span> <br><br>
+    <div>
+      <span>
+        computed는 반응성변수의 변화를 감시하고 <br>
+        계산된 결과값을 기억하는 cashing기능을 가진다
+      </span> <br><br>
+      <span>
+        getter전용으로 값을 가져오는데 <br>
+        get() {  } 의 반환값이 계산식의 결과값이다 <br>
+        계산된값은 변경하지 마세요!!<br>
+        임시 스냅샷 정도로 생각하는것이 무난함
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 027 nextTick.PNG">
   </div>
   <div class="textbox">
-    <span>
-      nextTick은 가장 마지막에 callback을 실행한다
-    </span> <br><br>
-    <span>
-      nextTick을 사용하는 이유는 DOM을 업데이트하면<br>
-      JS의 비동기 때문에 업데이트된 DOM을 찾지못하는 현상이 생기는데 <br>
-      이를 방지하기 위해서 마지막에 DOM을 갱신하게 하는것이 nextTick임
-    </span> <br><br>
+    <div>
+      <span>
+        nextTick은 가장 마지막에 callback을 실행한다
+      </span> <br><br>
+      <span>
+        nextTick을 사용하는 이유는 DOM을 업데이트하면<br>
+        JS의 비동기 때문에 업데이트된 DOM을 찾지못하는 현상이 생기는데 <br>
+        이를 방지하기 위해서 마지막에 DOM을 갱신하게 하는것이 nextTick임
+      </span> <br><br>
+    </div>
   </div>
+  <h2 id="vue-props-emits"> 
+    <a href="#vue-props-emits">#</a>
+    props와 emits
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 028 props와 emits.PNG">
   </div>
   <div class="textbox">
-    <span>
-      부모컴포넌트와 자식컴포넌트간의 상호작용!!!
-    </span> <br><br>
-    <span>
-      부모는 props로 데이터(변수, 함수)를 내려준다 <br>
-      자식은 emits으로 데이터(변수, 함수)를 올린다 <br>
-    </span> <br><br>
+    <div>
+      <span>
+        부모컴포넌트와 자식컴포넌트간의 상호작용!!!
+      </span> <br><br>
+      <span>
+        부모는 props로 데이터(변수, 함수)를 내려준다 <br>
+        자식은 emits으로 데이터(변수, 함수)를 올린다 <br>
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 029 emit.PNG">
   </div>
   <div class="textbox">
-    <span>
-      자식에서 함수를 실행 -> 이벤트발생 <br>
-      -> 부모에게 데이터전달, 이벤트 실행 -> 부모의 함수 실행
-    </span> <br><br>
-    <span>
-      emits:['이벤트명'] 으로 이벤트명을 모아주기
-    </span> <br><br>
-    <span>
-      자식의 함수안에서 emit정의한다 <br>
-      이 함수가 실행되면 emit도 실행된다
-    </span> <br><br>
-    <span>
-      부모에서는 자식컴포넌트의 이벤트를 연결하주고 <br>
-      이벤트발생시 부모에서 실행할 함수를 작성한다
-    </span> <br><br>
+    <div>
+      <span>
+        자식에서 함수를 실행 -> 이벤트발생 <br>
+        -> 부모에게 데이터전달, 이벤트 실행 -> 부모의 함수 실행
+      </span> <br><br>
+      <span>
+        emits:['이벤트명'] 으로 이벤트명을 모아주기
+      </span> <br><br>
+      <span>
+        자식의 함수안에서 emit정의한다 <br>
+        이 함수가 실행되면 emit도 실행된다
+      </span> <br><br>
+      <span>
+        부모에서는 자식컴포넌트의 이벤트를 연결하주고 <br>
+        이벤트발생시 부모에서 실행할 함수를 작성한다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 030 props.PNG">
   </div>
   <div class="textbox">
-    <span>
-      부모에서 데이터 내려보내면 자식은 자유롭게 사용가능 <br>
-      단, 자식에서 데이터를 변경해서는 안된다
-    </span> <br><br>
-    <span>
-      props: { } 안에서 내려받은 데이터 정보를 작성한다
-    </span> <br><br>
+    <div>
+      <span>
+        부모에서 데이터 내려보내면 자식은 자유롭게 사용가능 <br>
+        단, 자식에서 데이터를 변경해서는 안된다
+      </span> <br><br>
+      <span>
+        props: { } 안에서 내려받은 데이터 정보를 작성한다
+      </span> <br><br>
+    </div>
   </div>
+  <h2 id="vue-resfs"> 
+    <a href="#vue-resfs">#</a>
+    resfs
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 031 resfs.PNG">
   </div>
   <div class="textbox">
-    <span>
-      $refs.참조명 -> 그 태그에 접근한다
-    </span> <br><br>
-    <span>
-      태그에 접근하여 이벤트를 발생시커나 변수를 변경가능
-    </span> <br><br>
+    <div>
+      <span>
+        $refs.참조명 -> 그 태그에 접근한다
+      </span> <br><br>
+      <span>
+        태그에 접근하여 이벤트를 발생시커나 변수를 변경가능
+      </span> <br><br>
+    </div>
   </div>
+  <h2 id="vue-toRefs"> 
+    <a href="#vue-toRefs">#</a>
+    toRefs
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 032 toRefs.PNG">
   </div>
   <div class="textbox">
-    <span>
-      script영역에서 바깥에서 함수정의 -> 반환값 <br>
-      setup에서 사용하고 싶으면 반응형을 반환하게 해야함
-    </span> <br><br>
+    <div>
+      <span>
+        script영역에서 바깥에서 함수정의 -> 반환값 <br>
+        setup에서 사용하고 싶으면 반응형을 반환하게 해야함
+      </span> <br><br>
+    </div>
   </div>
+  <h2 id="vue-extra-js"> 
+    <a href="#vue-extra-js">#</a>
+    외부js
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 033 외부js.PNG">
   </div>
   <div class="textbox">
-    <span>
-      외부 js파일 -> 함수를 정의하여 어느 컴포넌트에서 든지 <br>
-      import 하여 사용 할 수 있다
-    </span> <br><br>
-    <span>
-      단, 함수의 return값은 반응형으로 감싸줘야 한다
-    </span> <br><br>
+    <div>
+      <span>
+        외부 js파일 -> 함수를 정의하여 어느 컴포넌트에서 든지 <br>
+        import 하여 사용 할 수 있다
+      </span> <br><br>
+      <span>
+        단, 함수의 return값은 반응형으로 감싸줘야 한다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 034 외부js사용.PNG">
   </div>
   <div class="textbox">
-    <span>
-      사용 할 때는 함수를 import하고 바로 호출식으로 사용가능
-    </span> <br><br>
+    <div>
+      <span>
+        사용 할 때는 함수를 import하고 바로 호출식으로 사용가능
+      </span> <br><br>
+    </div>
   </div>
+  <h2 id="vue-mixin"> 
+    <a href="#vue-mixin">#</a>
+    믹스인
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 035 믹스인1.PNG">
   </div>
   <div class="textbox">
-    <span>
-      믹스인은 외부js파일에서 함수를 <br>
-      아까 처럼 개별컴포넌트에서 사용도하고 <br>
-      전역으로도 사용 할 수 있는 기술이다
-    </span> <br><br>
-    <span>
-      일반적인 함수와 구분하기 위해서 $함수명으로 정의한다
-    </span> <br><br>
+    <div>
+      <span>
+        믹스인은 외부js파일에서 함수를 <br>
+        아까 처럼 개별컴포넌트에서 사용도하고 <br>
+        전역으로도 사용 할 수 있는 기술이다
+      </span> <br><br>
+      <span>
+        일반적인 함수와 구분하기 위해서 $함수명으로 정의한다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 036 믹스인2.PNG">
   </div>
   <div class="textbox">
-    <span>
-      로컬에서 믹스인을 사용하는 방법은 <br>
-      import하고 mixin: [이름], 의 형식으로 가져온다
-    </span> <br><br>
-    <span>
-      함수는 this.$함수명으로 사용한다
-    </span> <br><br>
+    <div>
+      <span>
+        로컬에서 믹스인을 사용하는 방법은 <br>
+        import하고 mixin: [이름], 의 형식으로 가져온다
+      </span> <br><br>
+      <span>
+        함수는 this.$함수명으로 사용한다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 037 믹스인3.PNG">
   </div>
   <div class="textbox">
-    <span>
-      전역으로 사용하기 위해서는 main.js에서 <br>
-      import를 하고 .mixin(이름)의 형식으로 가져온다
-    </span> <br><br>
-    <span>
-      함수는 $함수명으로 바로 사용가능하다
-    </span> <br><br>
+    <div>
+      <span>
+        전역으로 사용하기 위해서는 main.js에서 <br>
+        import를 하고 .mixin(이름)의 형식으로 가져온다
+      </span> <br><br>
+      <span>
+        함수는 $함수명으로 바로 사용가능하다
+      </span> <br><br>
+    </div>
   </div>
+  <h2 id="vue-plugin"> 
+    <a href="#vue-plugin">#</a>
+    플러그인
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 038 플러그인1.PNG">
   </div>
   <div class="textbox">
-    <span>
-      다국어 처리를 위해서 플러그인을 만들어준다
-    </span> <br><br>
-    <span>
-      해당 사진의 코드는 문서에 나타나 있으니 적극활용하자
-    </span> <br><br>
-    <span>
-      이 문서를 작성하였으면 전역으로 사용하기위해 main.js에 등록을 해야한다
-    </span> <br><br>
+    <div>
+      <span>
+        다국어 처리를 위해서 플러그인을 만들어준다
+      </span> <br><br>
+      <span>
+        해당 사진의 코드는 문서에 나타나 있으니 적극활용하자
+      </span> <br><br>
+      <span>
+        이 문서를 작성하였으면 전역으로 사용하기위해 main.js에 등록을 해야한다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 039 플러그인2.PNG">
   </div>
   <div class="textbox">
-    <span>
-      i18nString 객체안에서 <br>
-      언어에 따른 변수명의 값을 다르게 표현 할 수 있다
-    </span> <br><br>
-    <span>
-      hi : hello <br>
-      hi : 안녕
-    </span> <br><br>
-    <span>
-      .use() 안에 객체 변수를 담아주고 <br>
-      $translate("ko.hi") 이렇게 사용하면 된다
-    </span> <br><br>
+    <div>
+      <span>
+        i18nString 객체안에서 <br>
+        언어에 따른 변수명의 값을 다르게 표현 할 수 있다
+      </span> <br><br>
+      <span>
+        hi : hello <br>
+        hi : 안녕
+      </span> <br><br>
+      <span>
+        .use() 안에 객체 변수를 담아주고 <br>
+        $translate("ko.hi") 이렇게 사용하면 된다
+      </span> <br><br>
+    </div>
   </div>
+  <h2 id="vue-vuex"> 
+    <a href="#vue-vuex">#</a>
+    vuex
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 040 vuex 개관.PNG">
   </div>
   <div class="textbox">
-    <span>
-      vuex는 전역으로 변수의 상태를 관리하는 것이다 <br>
-      이곳 저곳에서 쓰이는 변수는 <br>
-      통일성이 있어야하고 함부로 변경되고 하면 안된다 <br>
-      따라서 vuex에서 변수를 관리하는 것이다
-    </span> <br><br>
-    <span>
-      기능은 크게 2가지이다 <br>
-      1. 값을 가져오기 -> getter를 이용하여 가져온다 <br>
-      2. 값을 수정한다 -> dispatch를 이용한다 
-    </span> <br><br>
+    <div>
+      <span>
+        vuex는 전역으로 변수의 상태를 관리하는 것이다 <br>
+        이곳 저곳에서 쓰이는 변수는 <br>
+        통일성이 있어야하고 함부로 변경되고 하면 안된다 <br>
+        따라서 vuex에서 변수를 관리하는 것이다
+      </span> <br><br>
+      <span>
+        기능은 크게 2가지이다 <br>
+        1. 값을 가져오기 -> getter를 이용하여 가져온다 <br>
+        2. 값을 수정한다 -> dispatch를 이용한다 
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 041 vuex1.PNG">
   </div>
   <div class="textbox">
-    <span>
-      state에서는 변수를 객체안에서 관리한다
-    </span> <br><br>
-    <span>
-      mutation은 오직 state에 접근가능하다 <br>
-      state의 변수값을 바꿀 수 있다
-    </span> <br><br>
+    <div>
+      <span>
+        state에서는 변수를 객체안에서 관리한다
+      </span> <br><br>
+      <span>
+        mutation은 오직 state에 접근가능하다 <br>
+        state의 변수값을 바꿀 수 있다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 042 vuex2.PNG">
   </div>
   <div class="textbox">
-    <span>
-      외부에서 state의 변수값을 바꾸고 싶어서 <br>
-      바꿀 값(payload)을 전달할때 
-    </span> <br><br>
-    <span>
-      commit을 호출하여 mutation에게 payload를 전달한다
-    </span> <br><br>
-    <span>
-      우리가 state의 변수값을 가져오고 싶을 때 <br>
-      getter를 이용하는데 <br>
-      getter는 vuex안의 computed역할을 수행한다
-    </span> <br><br>
+    <div>
+      <span>
+        외부에서 state의 변수값을 바꾸고 싶어서 <br>
+        바꿀 값(payload)을 전달할때 
+      </span> <br><br>
+      <span>
+        commit을 호출하여 mutation에게 payload를 전달한다
+      </span> <br><br>
+      <span>
+        우리가 state의 변수값을 가져오고 싶을 때 <br>
+        getter를 이용하는데 <br>
+        getter는 vuex안의 computed역할을 수행한다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 043 vuex3.PNG">
   </div>
   <div class="textbox">
-    <span>
-      외부에서 사용하려면 vuex에서 useStore를 import해야한다 <br>
-      useStore를 호출하여 store라는 변수에 저장을 하자
-    </span> <br><br>
-    <span>
-      1. 변수를 가져오고 싶으면 <br>
-      computed를 사용하고 getter를 이용해서 가져와야한다
-    </span> <br><br>
-    <span>
-      2. 변수를 변경하고 싶으면 dispatch를 활용하면된다 <br>
-      변경할 값들은 payload에 넣어주자
-    </span> <br><br>
+    <div>
+      <span>
+        외부에서 사용하려면 vuex에서 useStore를 import해야한다 <br>
+        useStore를 호출하여 store라는 변수에 저장을 하자
+      </span> <br><br>
+      <span>
+        1. 변수를 가져오고 싶으면 <br>
+        computed를 사용하고 getter를 이용해서 가져와야한다
+      </span> <br><br>
+      <span>
+        2. 변수를 변경하고 싶으면 dispatch를 활용하면된다 <br>
+        변경할 값들은 payload에 넣어주자
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 044 vuex modules1.PNG">
   </div>
   <div class="textbox">
-    <span>
-      상태관리를 하나의 변수만 하는것도 아니고 <br>
-      여러변수를 가지고 할테니까 <br>
-      변수별로 그룹화 할 필요가 있다 <br>
-      -> 이것이 모듈화
-    </span> <br><br>
-    <span>
-      namespaced를 넣어주면 폴더처럼 사용가능하다
-    </span> <br><br>
+    <div>
+      <span>
+        상태관리를 하나의 변수만 하는것도 아니고 <br>
+        여러변수를 가지고 할테니까 <br>
+        변수별로 그룹화 할 필요가 있다 <br>
+        -> 이것이 모듈화
+      </span> <br><br>
+      <span>
+        namespaced를 넣어주면 폴더처럼 사용가능하다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 045 vuex modules2.PNG">
   </div>
   <div class="textbox">
-    <span>
-      외부에서 모듈의 변수를 사용하고 싶으면 <br>
-      경로에서 모듈에 접근하여 사용하면 된다
-    </span> <br><br>
+    <div>
+      <span>
+        외부에서 모듈의 변수를 사용하고 싶으면 <br>
+        경로에서 모듈에 접근하여 사용하면 된다
+      </span> <br><br>
+    </div>
   </div>
+  <h2 id="vue-axios"> 
+    <a href="#vue-axios">#</a>
+    axios
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 046 axios1.PNG">
   </div>
   <div class="textbox">
-    <span>
-      axios는 DB에 정보를 요청하는 의사소통 방식이다
-    </span> <br><br>
-    <span>
-      핵심기능은 C R U D !!!
-    </span> <br><br>
-    <span>
-      핵심기능을 method라고 부른다
-    </span> <br><br>
+    <div>
+      <span>
+        axios는 DB에 정보를 요청하는 의사소통 방식이다
+      </span> <br><br>
+      <span>
+        핵심기능은 C R U D !!!
+      </span> <br><br>
+      <span>
+        핵심기능을 method라고 부른다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 047 axios2.PNG">
   </div>
   <div class="textbox">
-    <span>
-      axios에게 넣어줘야하는 값은<br> 
-      어떤 요청을 보낼것인가 -> method <br>
-      어디에 요청을 할 것인가 ->url
-    </span> <br><br>
-    <span>
-      axios를 사용하는 방식에는 그림처럼 2가지 방식이 있다
-    </span> <br><br>
+    <div>
+      <span>
+        axios에게 넣어줘야하는 값은<br> 
+        어떤 요청을 보낼것인가 -> method <br>
+        어디에 요청을 할 것인가 ->url
+      </span> <br><br>
+      <span>
+        axios를 사용하는 방식에는 그림처럼 2가지 방식이 있다
+      </span> <br><br>
+    </div>
   </div>
+  <h2 id="vue-slot"> 
+    <a href="#vue-slot">#</a>
+    slot
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 048 slot.PNG">
   </div>
   <div class="textbox">
-    <span>
-      slot의 핵심은 틀의 재활용성과 <br>
-      부모마다 다양한 내용을 넣을 수 있는 확장성이다
-    </span> <br><br>
-    <span>
-      slot마다 구분을 하기 위해서 name을 설정한다
-    </span> <br><br>
+    <div>
+      <span>
+        slot의 핵심은 틀의 재활용성과 <br>
+        부모마다 다양한 내용을 넣을 수 있는 확장성이다
+      </span> <br><br>
+      <span>
+        slot마다 구분을 하기 위해서 name을 설정한다
+      </span> <br><br>
+    </div>
   </div>
+  <h2 id="vue-router"> 
+    <a href="#vue-router">#</a>
+    router
+  </h2>
   <div class="img-position-center">
     <img src="./PIC/vue 049 router1.PNG">
   </div>
   <div class="textbox">
-    <span>
-      해당 주소에 맞는 컴포넌트르 보여준다!!!
-    </span> <br><br>
-    <span>
-      경로, 이름, 컴포넌트 를 쌍으로 묶어준다
-    </span> <br><br>
+    <div>
+      <span>
+        해당 주소에 맞는 컴포넌트르 보여준다!!!
+      </span> <br><br>
+      <span>
+        경로, 이름, 컴포넌트 를 쌍으로 묶어준다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 050 router2.PNG">
   </div>
   <div class="textbox">
-    <span>
-      main.js에서 router폴더를 import해줘야한다
-    </span> <br><br>
+    <div>
+      <span>
+        main.js에서 router폴더를 import해줘야한다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 051 router3.PNG">
   </div>
   <div class="textbox">
-    <span>
-      router-view로 해당 컴포넌트를 보여준다
-    </span> <br><br>
+    <div>
+      <span>
+        router-view로 해당 컴포넌트를 보여준다
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 052 router4.PNG">
   </div>
   <div class="textbox">
-    <span>
-      1. 태그를 이용한 방법 -> 경로 혹은 name을 써준다
-    </span> <br><br>
-    <span>
-      2. 함수에서 이동하는 방법 -> useRouter().push 사용
-    </span> <br><br>
+    <div>
+      <span>
+        1. 태그를 이용한 방법 -> 경로 혹은 name을 써준다
+      </span> <br><br>
+      <span>
+        2. 함수에서 이동하는 방법 -> useRouter().push 사용
+      </span> <br><br>
+    </div>
   </div>
   <div class="img-position-center">
     <img src="./PIC/vue 053 router5.PNG">
   </div>
   <div class="textbox">
-    <span>
-      route에는 router안의 객체의 정보가 있다
-    </span> <br><br>
-    <span>
-      앞서, router는 경로, 전달등의 정보가 있다
-    </span> <br><br>
+    <div>
+      <span>
+        route에는 router안의 객체의 정보가 있다
+      </span> <br><br>
+      <span>
+        앞서, router는 경로, 전달등의 정보가 있다
+      </span> <br><br>
+    </div>
   </div>
 </body>
 </html>
